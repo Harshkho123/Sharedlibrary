@@ -1,3 +1,3 @@
 def call(){
-sh 'ansible-playbook Ansible.yaml'
+sshPublisher(publishers: [sshPublisherDesc(configName: 'harsh', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'ansible-playbook Ansible.yaml', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
 }
